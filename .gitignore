@@ -1,0 +1,17 @@
+# Arquivos de byte compilados Python
+__pycache__/
+*.pyc
+
+# Ambientes virtuais Python
+venv/
+env/
+*.env
+
+# Arquivos de log
+*.log
+
+# Arquivos de saída e caches de ferramentas
+*.out
+.cache/
+dist/
+build/
