@@ -61,15 +61,15 @@ def editar_criptomoeda(criptomoedas):
         f"\nEditar Criptomoeda: {criptomoeda.symbol} | {criptomoeda.lastPrice} | {criptomoeda.nextFundingTime}"
     )
 
-    symbol = input("Digite o novo símbolo da criptomoeda: ").strip()
-    last_price = input("Digite o novo último preço da criptomoeda: ").strip()
-    next_funding_time = input(
-        "Digite o novo horário de financiamento da criptomoeda (formato DD/MM/YYYY): "
+    new_symbol = input("Digite o novo símbolo da criptomoeda: ").strip().upper()
+    last_price = float(input("Digite o último preço da criptomoeda: "))
+    next_funding_time_str = input(
+        "Digite uma nova data de financiamento da criptomoeda(DD/MM/AAAA): "
     ).strip()
 
-    criptomoeda.symbol = symbol
+    criptomoeda.symbol = new_symbol
     criptomoeda.lastPrice = last_price
-    criptomoeda.nextFundingTime = next_funding_time
+    criptomoeda.nextFundingTime = next_funding_time_str
 
     print("Criptomoeda editada com sucesso!")
 
